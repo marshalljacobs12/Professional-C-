@@ -1,0 +1,16 @@
+sudo: false
+os: linux
+dist: trusty
+compiler: clang
+
+addons:
+  apt:
+    sources:
+      - llvm-toolchain-trusty-4.0
+    packages:
+      - clang-4.0
+      - clang-tidy-4.0
+      - libwxgtk3.0-dev
+
+script:
+  - ./travis.sh
